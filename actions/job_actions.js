@@ -8,8 +8,8 @@ import {
 
 const JOB_ROOT_URL = 'http://api.indeed.com/ads/apisearch?';
 const JOB_QUERY_PARAMS = {
-  publisher: '4022372635962623'.
-  format; 'json',
+  publisher: '4022372635962623',
+  format: 'json',
   v: '2',
   latlong: 1,
   radius: 10,
@@ -21,7 +21,7 @@ const buildJobUrl = (zip) => {
   return `${JOB_ROOT_URL}${query}`;
 };
 
-export const fetchJobs = (region) => async (dispatch) {
+export const fetchJobs = (region) => async (dispatch) => {
   try {
     let zip = await reverseGeocode(region);
     const url = buildJobUrl(zip);
