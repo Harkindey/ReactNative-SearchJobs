@@ -13,13 +13,14 @@ const SLIDE_DATA = [
 class WelcomeScreen extends Component {
   state = { token: null }
 
-  componentWillMount() {
+  async componentWillMount() {
     let token = await AsyncStorage.getItem('fb_token');
 
       if (token) {
         this.props.navigation.navigate('map');
+        this.setState({ token });
       } else {
-      this.setState({ token });
+      this.setState({ token: false });
     }
   }
 

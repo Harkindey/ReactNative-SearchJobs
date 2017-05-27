@@ -11,7 +11,7 @@ class ReviewScreen extends Component {
         backgroundColor="rgba(0,0,0,0)"
         color="rgba(0,122,255,1)" />),
       headerTitleStyle: {
-        marginTop: (Platform.OS == 'andriod' ? 24 : 0 )
+        marginTop: (Platform.OS === 'andriod' ? 24 : 0 )
       }
   });
 
