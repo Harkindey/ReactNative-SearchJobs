@@ -5,11 +5,11 @@ import {
   FACEBOOK_LOGIN_FAIL
 } from './types';
 
-// AsyncStorage.setItems('fb_token', token);
-// AsyncStorage.getItems('fb_token');
+// AsyncStorage.setItem('fb_token', token);
+// AsyncStorage.getItem('fb_token');
 
 export const facebookLogin = () => async dispatch => {
-  let token = await AsyncStorage.getItems('fb_token');
+  let token = await AsyncStorage.getItem('fb_token');
 
   if (token) {
     //Dispatch  an action saying FB login is done
@@ -30,6 +30,6 @@ const doFacebookLogin = async dispatch => {
     return dispatch({ type: FACEBOOK_LOGIN_FAIL })
   }
 
-  await AsyncStorage.setItems('fb_token', token);
+  await AsyncStorage.setItem('fb_token', token);
   dispatch({ type : FACEBOOK_LOGIN_SUCCESS, payload:token })
 };
