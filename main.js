@@ -27,6 +27,11 @@ const MainNavigator = TabNavigator({
         }
       })
     }
+}, {
+  navigationOptions: {
+    tabBarVisible: false
+  },
+  lazy: true
 });
 
 class App extends React.Component {
