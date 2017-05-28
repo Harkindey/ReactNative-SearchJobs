@@ -25,7 +25,7 @@ class DeckScreen extends Component {
           ></MapView>
       </View>
         <View style={styles.detailWrapper}>
-          <Text>{job.comapany}</Text>
+          <Text>{job.company}</Text>
           <Text>{job.formattedRelativeTime}</Text>
         </View>
         <Text>
@@ -46,7 +46,7 @@ class DeckScreen extends Component {
       <View>
         <Swipe
           data={this.props.jobs}
-          rendercard={this.renderCard}
+          renderCard={this.renderCard}
           renderNoMoreCards={this.renderNoMoreCards}
         />
       </View>
