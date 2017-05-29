@@ -26,6 +26,7 @@ const MainNavigator = TabNavigator({
           })
         }
       },{
+        tabBarPosition: 'bottom',
         tabBarOptions: {
             labelStyle: { fontSize: 12 },
         }
