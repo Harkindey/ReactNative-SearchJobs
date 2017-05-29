@@ -9,7 +9,7 @@ expo default async () => {
       let { status } = await Permissions.askAsync(Permissions.REMOTE_NOTIFICATIONS);
 
       if (status !== 'granted') {
-        return;
+         return;
       }
 
       Notifications.getExponentPushTOkenAsync();
