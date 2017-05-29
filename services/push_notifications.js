@@ -4,8 +4,9 @@ import axios from 'axios';
 
 const PUSH_ENDPOINT = 'http://rallycoding.herokuapp.com/api/tokens';
 
-expo default async () => {
+export default async () => {
   let previousToken = await AsyncStorage.getItem('pushtoken');
+  console.log(previousToken);
 
   if (previousToken) {
     return;
@@ -17,7 +18,7 @@ expo default async () => {
       }
 
     let token = await Notifications.getExponentPushTokenAsync();
-    await axios.post(PUSH_ENDPOINT, { to=ken: { token }});
+    await axios.post(PUSH_ENDPOINT, { token: { token }});
     AsyncStorage.setItem('pushtoken', token);
   }
 };
