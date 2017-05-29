@@ -24,7 +24,9 @@ class ReviewScreen extends Component {
         formattedRelativeTime,
         url,
         longitude,
-        latitude
+        latitude,
+        jobtitle,
+        jobkey
       } = job;
 
       const initialRegion = {
@@ -35,7 +37,7 @@ class ReviewScreen extends Component {
       };
 
       return (
-        <Card>
+        <Card title={jobtitle} key ={jobkey}>
           <View style={{ height: 200 }}>
             <MapView
               scrollEnabled={false}
@@ -71,6 +73,7 @@ class ReviewScreen extends Component {
 const styles = {
   detailWrapper: {
     marginBottom: 10,
+    marginTop: 10,
     flexDirection: 'row',
     justifyContent: 'space-around'
   },
