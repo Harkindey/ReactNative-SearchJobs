@@ -12,7 +12,7 @@ class MapScreen extends Component {
       tabBarIcon: ({tintColor}) => {
         return <Icon name="my-location" size={30} color={tintColor} />
       }
-});
+  });
 
   state = {
     mapLoaded: false,
