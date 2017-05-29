@@ -36,7 +36,7 @@ class DeckScreen extends Component {
     );
   }
 
-  renderNoMoreCards() {
+  renderNoMoreCards = () => {
     return(
       <Card title="No More Jobs">
         <Button
