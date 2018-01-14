@@ -1,7 +1,6 @@
 # ReactNative-SearchJobs
 
 > A React-Native project
-# IF YOU WANT TO TRY/TEST THIS APP YOU CAN DROP YOU FACEBOOK ID SO I CAN ADD YOU AS A DEVELOPER OR TESTER
 
 ## Build Setup
 
