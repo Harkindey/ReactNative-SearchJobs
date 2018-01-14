@@ -16,7 +16,7 @@ class WelcomeScreen extends Component {
   async componentWillMount() {
     let token = await AsyncStorage.getItem('fb_token');
 
-      if (token) {
+      if (!token) {
         this.props.navigation.navigate('map');
         this.setState({ token });
       } else {
@@ -25,7 +25,7 @@ class WelcomeScreen extends Component {
   }
 
   onSlidesComplete=()=>{
-    this.props.navigation.navigate('auth');
+    this.props.navigation.navigate('map');
   }
 
   render() {
